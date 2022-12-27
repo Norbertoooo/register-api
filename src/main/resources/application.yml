@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: register-api
+  flyway:
+    enabled: ${FLYWAY_ENABLE:false}
+  datasource:
+    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5432/account}
+    username: ${DATASOURCE_USERNAME:register-api}
+    password: ${DATASOURCE_PASSWORD:register-api/2}
+
+server:
+  port: 8081

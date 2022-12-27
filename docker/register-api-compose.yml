@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  register-api-db:
+    container_name: register-api-db
+    image: postgres:14
+    environment:
+      - POSTGRES_USER=register-api
+      - POSTGRES_PASSWORD=register-api/2
+      - POSTGRES_DB=account
+    ports:
+      - "5432:5432"
