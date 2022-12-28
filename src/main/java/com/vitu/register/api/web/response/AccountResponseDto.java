@@ -23,7 +23,7 @@ public class AccountResponseDto {
     private String password;
     private String document;
     private String documentType;
-
+    private Double score;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MMMM-yyyy HH:mm:ss", locale = "US")
     private LocalDateTime creationDate;
 }

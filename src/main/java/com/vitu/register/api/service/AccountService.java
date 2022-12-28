@@ -26,7 +26,17 @@ public class AccountService {
         log.info("Creating new account: {}", account);
         account.setToken(this.createToken(account));
         account.setPassword(this.createPassword(account));
+        account.setScore(getScore(account));
         return accountRepository.save(account);
+    }
+
+    private Double getScore(Account account) {
+        return switch (account.getDocumentType()) {
+            case "CNH" -> 10.00;
+            case "RG" -> 20.00;
+            case "CPF" -> 30.00;
+            default -> 0.0;
+        };
     }
 
     private String createPassword(Account account) {

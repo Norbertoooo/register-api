@@ -7,5 +7,6 @@ create table account(
     birthdate date not null,
     document varchar(255) not null,
     document_type varchar(255) not null,
-    create_date date not null
+    create_date date not null,
+    score decimal
 );

@@ -30,7 +30,7 @@ public class Account {
     private String password;
     private String document;
     private String documentType;
-
+    private Double score;
     @CreationTimestamp
     private LocalDateTime createDate;
 

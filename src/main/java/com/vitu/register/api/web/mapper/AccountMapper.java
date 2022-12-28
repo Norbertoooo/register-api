@@ -18,6 +18,7 @@ public class AccountMapper {
                 .birthdate(account.getBirthdate())
                 .document(account.getDocument())
                 .documentType(account.getDocumentType())
+                .score(account.getScore())
                 .creationDate(account.getCreateDate())
                 .build();
     }
