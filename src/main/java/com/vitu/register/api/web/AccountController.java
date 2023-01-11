@@ -5,6 +5,7 @@ import com.vitu.register.api.service.AccountService;
 import com.vitu.register.api.web.mapper.AccountMapper;
 import com.vitu.register.api.web.request.CreateAccountRequestDto;
 import com.vitu.register.api.web.response.AccountResponseDto;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -24,7 +25,7 @@ public class AccountController {
     private final AccountMapper accountMapper;
 
     @PostMapping
-    public ResponseEntity<AccountResponseDto> createAccount(@RequestBody CreateAccountRequestDto requestDto) {
+    public ResponseEntity<AccountResponseDto> createAccount(@Valid @RequestBody CreateAccountRequestDto requestDto) {
         log.info("Receiving request to create new account: {}", requestDto);
 
         Account domain = accountMapper.createDomain(requestDto);
